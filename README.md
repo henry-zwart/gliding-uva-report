@@ -16,9 +16,9 @@ Per the [Typst local package instructions](https://github.com/typst/packages?tab
 
 `{version}` is the current version as it appears in [typst.toml](typst.toml), and `{data-dir}` depends on your operating system:
 
-- ~/.local/share (Linux)
-- ~/Library/Application Support (MacOS)
-- %APPDATA% (Windows)
+- `~/.local/share` (Linux)
+- `~/Library/Application Support` (MacOS)
+- `%APPDATA%` (Windows)
 
 Once this is done, navigate to the directory above where you'd like your report to be initialised, and run:
 
