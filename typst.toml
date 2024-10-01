@@ -5,3 +5,8 @@ entrypoint = "lib.typ"
 authors = ["Henry Zwart <@henry-zwart>"]
 license = "MIT"
 description = "An unofficial template for student lab reports at the University of Amsterdam"
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"

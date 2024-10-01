@@ -1,4 +1,4 @@
-#import "../lib.typ": uva-report
+#import "@local/uva-report-unofficial:0.1.0": uva-report
 
 #let abstract = [#lorem(200)]
 #show: uva-report.with(
