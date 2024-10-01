@@ -1,0 +1,7 @@
+[package]
+name = "uva-lab-report-unofficial"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Henry Zwart <@henry-zwart>"]
+license = "MIT"
+description = "An unofficial template for student lab reports at the University of Amsterdam"
