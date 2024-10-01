@@ -25,3 +25,5 @@ Once this is done, navigate to the directory above where you'd like your report 
 ```zsh
 typst init @local/uva-report-unofficial:{version} {report-directory-name}
 ```
+
+This will create a new directory with an initialised `main.typ` templated report which you can edit.
