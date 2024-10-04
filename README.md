@@ -1,29 +1,42 @@
-# UvA lab report template for Typst
+# UvA-report-unofficial
 
-This is a small Typst template for writing lab reports at the University of Amsterdam. 
-I've written it primarily for my own use, but have made it open-source in case others 
-find it helpful.
+UvA-report-unofficial is a Typst template for lab reports at the University of Amsterdam.
 
-# Usage
+It's written primarily for my own use, but I've made it open-source in case others find it helpful.
 
-> **Note:** Until this template has been submitted to the Typst template repository, using this template will require cloning a local copy. 
+## Dependencies
 
-If you haven't already done so, [install Typst](https://github.com/typst/typst#installation).
+Using the template requires a local installation of [Typst](https://github.com/typst/typst#installation).
 
+Until the template is listed on the Typst template repository, you'll also need a clone of
+this repo in a place Typst can see it. The Typst team recommend:
 
-Per the [Typst local package instructions](https://github.com/typst/packages?tab=readme-ov-file#local-packages), clone this repository to somewhere Typst can see it: 
-`{data-dir}/typst/packages/local/uva-report-unofficial/{version}`. 
+> `{data-dir}/typst/packages/local/uva-report-unofficial/{version}`
 
-`{version}` is the current version as it appears in [typst.toml](typst.toml), and `{data-dir}` depends on your operating system:
+Where `{version}` is the current version as it appears in [typst.toml](typst.toml), and
+`{data-dir}` depends on your operating system:
 
 - `~/.local/share` (Linux)
 - `~/Library/Application Support` (MacOS)
 - `%APPDATA%` (Windows)
 
-Once this is done, navigate to the directory above where you'd like your report to be initialised, and run:
+## Usage
 
 ```zsh
+# Navigate to where you'd like the report to live, e.g.,
+cd $HOME/reports
+
+# Create the report directory
 typst init @local/uva-report-unofficial:{version} {report-directory-name}
 ```
 
-This will create a new directory with an initialised `main.typ` templated report which you can edit.
+This will create a new directory at `$HOME/reports/{report-directory-name}`, with
+a templated document, `main.typ`, which you can edit.
+
+## Contributing
+
+Pull requests are welcome. For major changes or bugs, please open an issue.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
