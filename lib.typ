@@ -45,7 +45,7 @@ https://github.com/essmehdi/ensias-report-template/ */
       #table(
         columns: (auto, auto),
         [*Student*], [*ID*],
-        ..authors.flatten()
+        ..authors.map(author => (author.name, author.id)).flatten()
       )
     ],
     grid.cell(align: right)[
@@ -92,7 +92,7 @@ https://github.com/essmehdi/ensias-report-template/ */
   fontsize: 12pt,
 ) = {
   // Set document properties 
-  set document(author: authors.map(elem => elem.at(0)), title: title)
+  set document(author: authors.map(elem => elem.name), title: title)
 
   // Display title page first with separate formatting
   titlepage(
