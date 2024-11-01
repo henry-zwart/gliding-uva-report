@@ -1,12 +1,15 @@
 #import "@local/uva-report-unofficial:0.1.0": uva-report
 
 #let abstract = [#lorem(200)]
+#let authors = (
+  (name: "My name", id: "MyID"), 
+  (name: "Your name", id: "YourID")
+)
 #show: uva-report.with(
   abstract: abstract,
   title: "My report",
   subtitle: "A great report",
-  student_name: "My name",
-  student_id: "3141592653",
+  authors: authors,
   lecturer: "My lecturer's name",
   course_name: "Course name",
   course_code: "Course code",
