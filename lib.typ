@@ -4,8 +4,7 @@ https://github.com/essmehdi/ensias-report-template/ */
 #let titlepage(
   title: "", 
   subtitle: none, 
-  student_name: "",
-  student_id: "",
+  authors: (),
   lecturer: "",
   course_name: "",
   course_code: "",
@@ -14,6 +13,7 @@ https://github.com/essmehdi/ensias-report-template/ */
   school_logo: "resources/uva_logo_nl.svg",
 ) = {
   set line(length: 100%, stroke: 0.5pt)
+  set table(stroke: none)
 
   // Display university logo
   block(
@@ -39,25 +39,29 @@ https://github.com/essmehdi/ensias-report-template/ */
   // Student, lecturer, course details
   h(1fr)
   grid(
-    columns: (auto, 1fr, auto),
-    [
-      // Student
-      #text(weight: "bold")[Student] \
-      #student_name \
-      #student_id
+    columns: (1fr, 1fr),
+    grid.cell(align: left)[
+      // Students
+      #table(
+        columns: (auto, auto),
+        [*Student*], [*ID*],
+        ..authors.flatten()
+      )
     ],
-    [
+    grid.cell(align: right)[
       // Lecturer
-      #align(right)[
-        #text(weight: "bold")[Lecturer] \
-        #lecturer
-      ]
+      #table(
+        align: right,
+        [*Lecturer*],
+        lecturer
+      )
       // Course
-      #align(right)[
-        #text(weight: "bold")[Course] \
-        #course_name \
-        #course_code
-      ]
+      #table(
+        align: right,
+        [*Course*],
+        course_name,
+        course_code,
+      )
     ]
   )
 
@@ -76,8 +80,7 @@ https://github.com/essmehdi/ensias-report-template/ */
   abstract: "",
   title: "",
   subtitle: none,
-  student_name: "",
-  student_id: "",
+  authors: (),
   lecturer: "",
   course_name: "",
   course_code: "",
@@ -89,14 +92,13 @@ https://github.com/essmehdi/ensias-report-template/ */
   fontsize: 12pt,
 ) = {
   // Set document properties 
-  set document(author: student_name, title: title)
+  set document(author: authors.map(elem => elem.at(0)), title: title)
 
   // Display title page first with separate formatting
   titlepage(
     title: title,
     subtitle: subtitle,
-    student_name: student_name,
-    student_id: student_id,
+    authors: authors,
     lecturer: lecturer,
     course_name: course_name,
     course_code: course_code,
