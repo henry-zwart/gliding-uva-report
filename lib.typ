@@ -1,5 +1,10 @@
 /*The titlepage template is heavily inspired by the 'Red Agora' title page template: 
 https://github.com/essmehdi/ensias-report-template/ */
+#let maybe_email_footnote(author) = {
+  if "email" in author {
+    footnote(author.email)
+  }
+}
 
 #let titlepage(
   title: "", 
@@ -45,7 +50,10 @@ https://github.com/essmehdi/ensias-report-template/ */
       #table(
         columns: (auto, auto),
         [*Student*], [*ID*],
-        ..authors.map(author => (author.name, author.id)).flatten()
+        ..authors.map(author => (
+          [#author.name #maybe_email_footnote(author)], 
+          author.id
+        )).flatten()
       )
     ],
     grid.cell(align: right)[
