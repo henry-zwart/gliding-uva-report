@@ -16,6 +16,7 @@ https://github.com/essmehdi/ensias-report-template/ */
   programme: none,
   academic_year: none,
   school_logo: "resources/uva_logo_nl.svg",
+  title_figure: none,
 ) = {
   set line(length: 100%, stroke: 0.5pt)
   set table(stroke: none)
@@ -73,6 +74,12 @@ https://github.com/essmehdi/ensias-report-template/ */
     ]
   )
 
+  if title_figure != none {
+    align(center + horizon, block(
+        figure(image(title_figure, width: 35%), numbering: none)
+    ))
+  }
+
   // Programme, academic year
   if (programme != none and academic_year != none) {
     align(center + bottom)[
@@ -96,6 +103,7 @@ https://github.com/essmehdi/ensias-report-template/ */
   academic_year: none,
   bibliography_path: none,
   school_logo: "resources/uva_logo_nl.svg",
+  title_figure: none,
   font: "Georgia",
   fontsize: 12pt,
 ) = {
@@ -113,6 +121,7 @@ https://github.com/essmehdi/ensias-report-template/ */
     programme: programme,
     academic_year: academic_year,
     school_logo: school_logo,
+    title_figure: title_figure,
   )
 
   let logo = image(school_logo, width: 60%)
