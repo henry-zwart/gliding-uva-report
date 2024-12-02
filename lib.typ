@@ -102,6 +102,7 @@ https://github.com/essmehdi/ensias-report-template/ */
   programme: none,
   academic_year: none,
   bibliography_path: none,
+  bibliography_style: "american-psychological-association",
   school_logo: "resources/uva_logo_nl.svg",
   title_figure: none,
   font: "Georgia",
@@ -184,6 +185,7 @@ https://github.com/essmehdi/ensias-report-template/ */
   body
 
   if bibliography_path != none {
-    bibliography(bibliography_path)
+    set text(size: 9pt)
+    bibliography(bibliography_path, style: bibliography_style)
   }
 }
