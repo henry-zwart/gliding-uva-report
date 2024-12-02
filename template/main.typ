@@ -3,7 +3,7 @@
 #let abstract = [#lorem(200)]
 #let authors = (
   (name: "My name", id: "MyID"), 
-  (name: "Your name", id: "YourID")
+  (name: "Your name", id: "YourID", email: "you@youremail.com")
 )
 #show: uva-report.with(
   abstract: abstract,
