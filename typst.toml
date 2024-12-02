@@ -4,7 +4,11 @@ version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["Henry Zwart <@henry-zwart>"]
 license = "MIT"
-description = "An unofficial template for student lab reports at the University of Amsterdam"
+description = "Unofficial template for student reports at the University of Amsterdam"
+repository = "https://github.com/henry-zwart/uva-report-unofficial"
+keywords = ["report", "university", "student"]
+categories = ["report", "paper"]
+compiler = "0.12.0"
 
 [template]
 path = "template"
