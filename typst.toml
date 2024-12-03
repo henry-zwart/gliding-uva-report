@@ -1,10 +1,10 @@
 [package]
-name = "uva-report-unofficial"
+name = "gliding-uva-report"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["Henry Zwart <@henry-zwart>"]
 license = "MIT"
-description = "Unofficial template for student reports at the University of Amsterdam"
+description = "An unofficial template for student reports at the University of Amsterdam"
 repository = "https://github.com/henry-zwart/uva-report-unofficial"
 keywords = ["report", "university", "student"]
 categories = ["report", "paper"]

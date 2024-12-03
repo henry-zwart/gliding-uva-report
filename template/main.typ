@@ -1,4 +1,4 @@
-#import "@local/uva-report-unofficial:0.1.0": uva-report
+#import "@local/gliding-uva-report:0.1.0": uva-report
 
 #let abstract = [#lorem(200)]
 #let authors = (
