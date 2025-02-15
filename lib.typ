@@ -16,6 +16,9 @@ https://github.com/essmehdi/ensias-report-template/ */
   school_logo: none,
   title_figure: none,
 ) = {
+  /*
+  Display a titlepage on its own page.
+  */
   set line(length: 100%, stroke: 0.5pt)
   set table(stroke: none)
   set text(font: "Libertinus Serif")
@@ -88,8 +91,10 @@ https://github.com/essmehdi/ensias-report-template/ */
   subtitle: none,
   authors: (),
   course: none,
-  school_logo: none,
 ) = {
+  /*
+  Title section at top of page, including title, subtitle, authors.
+  */
   set line(length: 100%, stroke: 0.5pt)
   set table(stroke: none)
   set text(font: "Libertinus Serif")
