@@ -228,7 +228,6 @@ https://github.com/essmehdi/ensias-report-template/ */
         subtitle: subtitle, 
         authors: authors, 
         course: course, 
-        school_logo: school_logo, 
     ))
   }
 
