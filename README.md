@@ -1,8 +1,6 @@
 # gliding-uva-report
 
-A Typst template for lab reports at the University of Amsterdam.
-
-It's written primarily for my own use, but I've made it open-source in case others find it helpful.
+A Typst template for student reports at the University of Amsterdam.
 
 ## Dependencies
 
