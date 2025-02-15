@@ -1,20 +1,21 @@
-#import "@local/gliding-uva-report:0.1.0": uva-report
+#import "@local/gliding-uva-report:0.1.0": report, paper
 
-#let abstract = [#lorem(200)]
+#let abstract = [#lorem(100)]
 #let authors = (
   (name: "My name", id: "MyID"), 
   (name: "Your name", id: "YourID", email: "you@youremail.com")
 )
-#show: uva-report.with(
+#let course = (
+  name: "Course name", 
+  code: "Course code", 
+  lecturer: "My lecturer's name"
+)
+#show: paper.with(
   abstract: abstract,
   title: "My report",
   subtitle: "A great report",
   authors: authors,
-  lecturer: "My lecturer's name",
-  course_name: "Course name",
-  course_code: "Course code",
-  programme: "My programme",
-  academic_year: "2024 - 2025",
+  course: course,
 )
 
 = Introduction
