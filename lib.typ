@@ -103,20 +103,17 @@ https://github.com/essmehdi/ensias-report-template/ */
     top,
     float: true,
     scope: "parent",
-    clearance: 30pt,
+    clearance: 20pt,
     {
       align(center, {
-        text(16pt, tracking: 2pt, smallcaps(subtitle))
+        text(16pt, tracking: 2pt, smallcaps([#subtitle - #datetime.today().display("[day] [month repr:long] [year]")]))
         linebreak()
         text(22pt, weight: "bold", title)
         line()
-        text(14pt, smallcaps(
-          datetime.today().display("[day] [month repr:long] [year]")
-        ))
       })
 
       // Display the authors list.
-      set par(leading: 0.6em)
+      set par(spacing: 0.5em, leading: 0.5em)
       for i in range(calc.ceil(authors.len() / 3)) {
         let end = calc.min((i + 1) * 3, authors.len())
         let is-last = authors.len() == end
@@ -158,13 +155,14 @@ https://github.com/essmehdi/ensias-report-template/ */
   n_columns: 2,
   paper-size: "us-letter",
   school_logo: "resources/uva_logo_nl.svg",
-  font: "Georgia",
+  font: "Libertinus Serif",
   fontsize: 10pt,
   titlepage: false,
   title_figure: none,
   bibliography: none,
   bib_style: "american-psychological-association",
   bib_fontsize: 9pt,
+  appendices: none,
   body,
 ) = {
   set document(author: authors.map(elem => elem.name), title: title)
@@ -174,6 +172,7 @@ https://github.com/essmehdi/ensias-report-template/ */
     paper: paper-size,
     numbering: "1",
     columns: 2,
+    margin: (x: 1.6cm, y: 1.8cm),
     header: {
       let header_img = box(image(school_logo, width: 60%))
       let header_title = text(
@@ -232,14 +231,14 @@ https://github.com/essmehdi/ensias-report-template/ */
   }
 
   if abstract != none {
-    set heading(outlined: false, numbering: none)
-    [= Abstract]
-    abstract
+    [#text(weight: "semibold", [Abstract]) #{emph(abstract)}]
   }
 
   body
 
   bibliography
+
+  appendices
 }
 
 
@@ -356,3 +355,4 @@ https://github.com/essmehdi/ensias-report-template/ */
     bibliography(bibliography_path, style: bibliography_style)
   }
 }
+
